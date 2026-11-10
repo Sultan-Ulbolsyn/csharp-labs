@@ -3,8 +3,7 @@ using System;
 
 class Program
 {
-    // Матрицаны экранға шығаратын метод
-    static void PrintMatrix(int[,] m)
+        static void PrintMatrix(int[,] m)
     {
         for (int i = 0; i < m.GetLength(0); i++)
         {
@@ -16,7 +15,6 @@ class Program
         }
     }
 
-    // Әр жолда теріс элемент бар-жоғын анықтайды
     static int[] FindNegativeRows(int[,] m)
     {
         int[] b = new int[m.GetLength(0)];
@@ -44,16 +42,15 @@ class Program
         int n = 5;
         int[,] matrix = new int[n, n];
 
-        Random rnd = new Random(nomer);
+Random rnd = new Random(nomer);
 
-        // Матрицаны кездейсоқ сандармен толтыру
-        for (int i = 0; i < n; i++)
-        {
-            for (int j = 0; j < n; j++)
-            {
-                matrix[i, j] = rnd.Next(-10, 11);
-            }
-        }
+for (int i = 0; i < n; i++)
+{
+    for (int j = 0; j < n; j++)
+    {
+        matrix[i, j] = rnd.Next(-10, 11);
+    }
+}
 
         Console.WriteLine("Матрица:");
         PrintMatrix(matrix);
