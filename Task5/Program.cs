@@ -42,15 +42,15 @@ class Program
         int n = 5;
         int[,] matrix = new int[n, n];
 
-Random rnd = new Random(nomer);
+    Random rnd = new Random(nomer);
 
-for (int i = 0; i < n; i++)
-{
-    for (int j = 0; j < n; j++)
+    for (int i = 0; i < n; i++)
     {
-        matrix[i, j] = rnd.Next(-10, 11);
+        for (int j = 0; j < n; j++)
+        {
+            matrix[i, j] = rnd.Next(-10, 11);
+        }
     }
-}
 
         Console.WriteLine("Матрица:");
         PrintMatrix(matrix);
